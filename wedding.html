@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wedding RSVP - Hannah Michal & Ishai</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #fff6f9;
+      text-align: center;
+      padding: 30px;
+    }
+    input, select, textarea {
+      padding: 10px;
+      margin: 10px;
+      width: 300px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #d63384;
+      color: white;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>You're invited! 💍</h1>
+  <h2>Hannah Michal & Ishai's Wedding</h2>
+  <p>Please RSVP below:</p>
+
+  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
+    <input type="text" name="Full Name" placeholder="Your Name" required><br>
+    
+    <select name="Will you attend?" required>
+      <option value="">Will you attend?</option>
+      <option value="Yes, I’ll be there!">Yes, I’ll be there!</option>
+      <option value="Sorry, I can't come">Sorry, I can't come</option>
+    </select><br>
+
+    <input type="number" name="Number of guests" placeholder="Number of guests" min="1"><br>
+
+    <textarea name="Dietary Restrictions" placeholder="Any dietary restrictions?"></textarea><br>
+
+    <textarea name="Message for the couple" placeholder="Leave us a message!"></textarea><br>
+
+    <button type="submit">Send RSVP</button>
+  </form>
+</body>
+</html>
 
