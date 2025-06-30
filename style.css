@@ -24,7 +24,7 @@ input, select {
 }
 
 button {
-  background-color: #b3005b;
+  background-color: #0d080a;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -34,12 +34,35 @@ button {
 }
 
 button:hover {
-  background-color: #99004d;
+  background-color: #494947;
 }
 img{
-  width: 100%;
-  max-height: 300px;
-  object-fit: cover;
+ width: 100%;
+  height: auto;
   display: block;
   margin-bottom: 20px;
+}
+form {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+input, select, button {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 16px;
+  }
 }
