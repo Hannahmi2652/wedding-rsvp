@@ -1,53 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="he" dir="rtl">
 <head>
-  <title>Wedding RSVP - Hannah Michal & Ishai</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background-color: #fff6f9;
-      text-align: center;
-      padding: 30px;
-    }
-    input, select, textarea {
-      padding: 10px;
-      margin: 10px;
-      width: 300px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #d63384;
-      color: white;
-      border: none;
-      border-radius: 10px;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>אישור הגעה לחתונה</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>You're invited! 💍</h1>
-  <h2>Hannah Michal & Ishai's Wedding</h2>
-  <p>Please RSVP below:</p>
 
-  <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-    <input type="text" name="Full Name" placeholder="Your Name" required><br>
-    
-    <select name="Will you attend?" required>
-      <option value="">Will you attend?</option>
-      <option value="Yes, I’ll be there!">Yes, I’ll be there!</option>
-      <option value="Sorry, I can't come">Sorry, I can't come</option>
-    </select><br>
+  <h1>אנא אשרו את הגעתכם לחתונה שלנו 💍</h1>
 
-    <input type="number" name="Number of guests" placeholder="Number of guests" min="1"><br>
+  <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+    <label for="name">שם מלא:</label>
+    <input type="text" id="name" name="name" required>
 
-    <textarea name="Dietary Restrictions" placeholder="Any dietary restrictions?"></textarea><br>
+    <label for="coming">תגיעו?</label>
+    <select id="coming" name="coming">
+      <option value="yes">כן</option>
+      <option value="no">לא</option>
+      <option value="maybe">אולי</option>
+    </select>
 
-    <textarea name="Message for the couple" placeholder="Leave us a message!"></textarea><br>
+    <label for="guests">כמה אנשים תגיעו?</label>
+    <input type="number" id="guests" name="guests" min="1" max="10">
 
-    <button type="submit">Send RSVP</button>
+    <button type="submit">שלח</button>
   </form>
-  <h1>hannah</h1>
+
 </body>
 </html>
-
