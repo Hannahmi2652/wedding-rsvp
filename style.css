@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: right;
   padding: 20px;
-  background-color: #fff5f8;
+  background-color: white; /* ← set background to white */
 }
 
 h1 {
