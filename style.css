@@ -7,7 +7,7 @@ body {
 
 h1 {
   color: black;
-  align-text:center;
+  text-align: center;
 }
 
 label, input, select, button {
