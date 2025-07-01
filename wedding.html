@@ -24,7 +24,13 @@
 
     <label for="guests">כמה אנשים תגיעו?</label>
     <input type="number" id="guests" name="guests" min="1" max="10">
-
+<label for="phone">מספר טלפון:</label>
+<input type="tel" id="phone" name="phone" required>
+    <label for="bus">תרצו הסעה באוטובוס?</label>
+<select id="bus" name="bus">
+  <option value="yes">כן</option>
+  <option value="no">לא</option>
+</select>
     <button type="submit">שלח</button>
   </form>
 <script>
