@@ -27,6 +27,24 @@
 
     <button type="submit">שלח</button>
   </form>
+<script>
+  document.getElementById("rsvp-form").addEventListener("submit", function(e) {
+    e.preventDefault(); // prevent form from submitting normally
 
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/PASTE_YOUR_SCRIPT_URL_HERE/exec", {
+      method: "POST",
+      body: data
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = "thankyou.html"; // redirect to thank you page
+      } else {
+        alert("אירעה שגיאה. אנא נסו שוב.");
+      }
+    });
+  });
+</script>
 </body>
 </html>
