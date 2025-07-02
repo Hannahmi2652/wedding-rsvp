@@ -4,7 +4,9 @@ body {
   padding: 20px;
   background-color: #e9e4d4; 
 }
-
+img{
+  align-items: center;  
+}
 h1 {
   color: black;
   text-align: center;
