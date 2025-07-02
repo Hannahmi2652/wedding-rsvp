@@ -44,10 +44,7 @@
     <button type="submit">Envoyer / שלח</button>
   </form>
 <script>
-  // If user already confirmed before, redirect them immediately to thankyou.html
-if (localStorage.getItem("rsvpConfirmed") === "true") {
-  window.location.href = "thankyou.html";
-}
+
  document.getElementById("rsvp").addEventListener("submit", function(e) {
     e.preventDefault();
     const form = e.target;
