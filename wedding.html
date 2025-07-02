@@ -62,13 +62,10 @@
   });
   const video = document.getElementById('myVideo');
   video.playbackRate = 2; 
-  //here is if the come another time 
-   const rsvpForm = document.getElementById("rsvp");
-  const video = document.getElementById('myVideo');
-
-  // Speed up the background video
-  video.playbackRate = 2;
-
+// If user already confirmed before, redirect them immediately to thankyou.html
+if (localStorage.getItem("rsvpConfirmed") === "true") {
+  window.location.href = "thankyou.html";
+}
  
 </script>
 
