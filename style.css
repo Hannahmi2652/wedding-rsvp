@@ -5,7 +5,11 @@ body {
   background-color: #e9e4d4; 
 }
 img{
-  align-items: center;  
+   max-width: 90%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 h1 {
   color: black;
