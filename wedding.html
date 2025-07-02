@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<video width="320" height="240" autoplay muted loop playsinline style="border: none; outline: none;">
+<video id="myVideo" width="320" height="240" autoplay muted loop playsinline style="border: none; outline: none;">
   <source src="Untitled design (2).mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -56,6 +56,8 @@
       }
     });
   });
+  const video = document.getElementById('myVideo');
+  video.playbackRate = 1.5; 
 </script>
 
 </body>
