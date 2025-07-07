@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="מוזמנים לחתונה שלנו! / Vous êtes invités à notre mariage !" />
+  <meta property="og:description" content="בואו לחגוג איתנו את היום המאושר בחיינו / Rejoignez-nous pour une journée inoubliable." />
+  <meta property="og:image" content="https://hannahmi2652.github.io/wedding-rsvp/cart.jpg" />
+  <meta property="og:url" content="https://hannahmi2652.github.io/wedding-rsvp/wedding.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Confirmation de présence au mariage / אישור הגעה לחתונה</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video id="myVideo" width="320" height="240" autoplay muted loop playsinline style="border: none; outline: none;">
+  <source src="videocard.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+  <h1>אנא אשרו את הגעתכם לחתונה שלנו </h1>
+  <h1>Merci de confirmer votre présence à notre mariage</h1>
+<br><br>
+  <form id="rsvp">
+    <label for="name"> Nom Complet / שם מלא :</label>
+    <input type="text" id="name" name="name" required>
+    <label for="coming"> Vous serez des nôtres / נתראה ביום הגדול ?</label>
+    <select id="coming" name="coming">
+      <option value="yes">Oui / כן</option>
+      <option value="no"> Non / לא</option>
+      <option value="maybe">Peut-être / אולי</option>
+    </select>
+
+    <label for="guests">Combien de personnes / כמה תהיו?</label>
+    <input type="number" id="guests" name="guests" min="1" max="10">
+<label for="phone">Numéro de téléphone / מספר טלפון :</label>
+<input type="tel" id="phone" name="phone" required>
+
+<label for="for">Côté du marié ou de la mariée / אתם מהצד של החתן או הכלה?</label>
+<select id="for" name="for">
+  <option value="groom"> marié / חתן</option>
+  <option value="bride"> mariée / כלה</option>
+</select>
+
+    <button type="submit">Envoyer / שלח</button>
+  </form>
+<script>
+
+ document.getElementById("rsvp").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbzWjZM6TDRm9nNC_H3iScNxe6-810myvTROU7Y7eeWbEtDRlXEIFfOR27ZmiBRtLN-X/exec", {
+      method: "POST",
+      body: data
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = "thankyou.html";
+      } else {
+        alert("אירעה שגיאה בשליחה. אנא נסו שוב.");
+      }
+    });
+  });
+  const video = document.getElementById('myVideo');
+  video.playbackRate = 2; 
+
+ 
+</script>
+
+</body>
+</html>
